@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import com.attornatusVaga.Excecao.ExcecaoPessoa;
+import com.attornatusVaga.Excecao.ExcecaoEndereco;
 import com.attornatusVaga.Teste.Entidades.Endereco;
 import com.attornatusVaga.Teste.Entidades.Pessoa;
 import com.attornatusVaga.Teste.Repositorios.EnderecoRepositorio;
@@ -29,8 +29,7 @@ public class EnderecoServicos {
 			return enderecoRepositorio.save(endereco);
 
 		} catch (Exception e) {
-			throw new ExcecaoPessoa(
-					"Erro ao criar novo endereço , verifique se a Pessoa que voçe esta passando esta cadastrada ");
+			throw new ExcecaoEndereco("Erro ao criar novo endereço , verifique se a Pessoa que voçe esta passando esta cadastrada");
 		}
 	}
 
@@ -40,7 +39,7 @@ public class EnderecoServicos {
 			return enderecoRepositorio.buscarEnderecoPorPessoa(id);
 
 		} catch (Exception e) {
-			throw new ExcecaoPessoa("Erro ao realizar a consulta  , verifique se a pessoa se o ID esta correto ");
+			throw new ExcecaoEndereco("Erro ao realizar a consulta  , verifique se a pessoa se o ID esta correto");
 		}
 	}
 
