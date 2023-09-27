@@ -25,6 +25,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.attornatusVaga.Excecao.ExcecaoPessoa;
 import com.attornatusVaga.Teste.Entidades.Pessoa;
 import com.attornatusVaga.Teste.Repositorios.PessoaRepositorio;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @ExtendWith(MockitoExtension.class)
 public class PessoaServicosTest {
@@ -34,6 +35,8 @@ public class PessoaServicosTest {
 
 	@Mock
 	PessoaRepositorio pessoaRepositorio;
+	
+	
 
 	private Pessoa pessoa;
 
